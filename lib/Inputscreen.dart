@@ -3,7 +3,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:qrcode/data.dart';
-import 'package:qrcode/images.dart';
 import 'global.dart' as globals;
 import 'package:cloud_firestore/cloud_firestore.dart';
 
