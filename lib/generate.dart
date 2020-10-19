@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'dart:ui';
 import 'package:flutter/rendering.dart';
@@ -88,37 +89,75 @@ class GeneratePageState extends State<GeneratePage> {
         ]))),
       ),
       resizeToAvoidBottomPadding: false,
-      floatingActionButton: new FloatingActionButton(
-        child: Container(
-          width: 60,
-          height: 60,
-          child: Icon(Icons.calendar_today),
-          decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(colors: [
-                Color.fromRGBO(143, 148, 251, 1),
-                Color.fromRGBO(143, 148, 251, .6),
-              ])),
-        ),
-        onPressed: () {
-          getofflinedata();
-          showDatePicker(
+      floatingActionButton: SpeedDial(
+        animatedIcon: AnimatedIcons.menu_close,
+        curve: Curves.bounceIn,
+        children: [
+          SpeedDialChild(
+            child: Icon(Icons.calendar_today),
+            label: "Entry/Exit Log", labelStyle: TextStyle(color: Colors.white),
+            labelBackgroundColor: Colors.black,
+            onTap: () {
+              getofflinedata();
+              showDatePicker(
                   context: context,
                   initialDate: DateTime.now(),
                   firstDate: DateTime(2020),
                   lastDate: DateTime(3030))
               .then((date) {
-            setState(() {
-              formattedDate = "${date.day}-${date.month}-${date.year}";
-              globals.date = formattedDate;
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => data()),
-              );
-            });
-          });
-        },
+                setState(() {
+                formattedDate = "${date.day}-${date.month}-${date.year}";
+                globals.date = formattedDate;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => data()),
+                  );
+                });
+              });
+            },
+          ),
+        SpeedDialChild(
+          child: Icon(Icons.settings),
+          label: "Settings", labelStyle: TextStyle(color: Colors.white),
+          labelBackgroundColor: Colors.black,
+          backgroundColor: Color.fromRGBO(143, 148, 251, 2),
+          onTap: () {
+            
+          },
+        )
+        ],
       ),
+      // floatingActionButton: new FloatingActionButton(
+      //   child: Container(
+      //     width: 60,
+      //     height: 60,
+      //     child: Icon(Icons.calendar_today),
+      //     decoration: BoxDecoration(
+      //         shape: BoxShape.circle,
+      //         gradient: LinearGradient(colors: [
+      //           Color.fromRGBO(143, 148, 251, 1),
+      //           Color.fromRGBO(143, 148, 251, .6),
+      //         ])),
+      //   ),
+      //   onPressed: () {
+      //     getofflinedata();
+      //     showDatePicker(
+      //             context: context,
+      //             initialDate: DateTime.now(),
+      //             firstDate: DateTime(2020),
+      //             lastDate: DateTime(3030))
+      //         .then((date) {
+      //       setState(() {
+      //         formattedDate = "${date.day}-${date.month}-${date.year}";
+      //         globals.date = formattedDate;
+      //         Navigator.push(
+      //           context,
+      //           MaterialPageRoute(builder: (context) => data()),
+      //         );
+      //       });
+      //     });
+      //   },
+      // ),
       body: Container(
         padding: EdgeInsets.all(20.0),
         child: Column(
