@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "632559908450",
+    "firebase_url": "https://axlproject-e461f.firebaseio.com",
+    "project_id": "axlproject-e461f",
+    "storage_bucket": "axlproject-e461f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632559908450:android:0f8ec8732e010a1191033b",
+        "android_client_info": {
+          "package_name": "com.iot.axl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632559908450-p5t5tua6fdimp5fho8mgvr2k2gouct0b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iot.axl",
+            "certificate_hash": "7854a7ae5daca86d0494d6222599a2bea6095d79"
+          }
+        },
+        {
+          "client_id": "632559908450-fftr091l050424394qt1a9rqu75gtvjg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0NYXWag7wyAIryamYZ_i6tdBjaURHzB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632559908450-fftr091l050424394qt1a9rqu75gtvjg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "632559908450-tg7q1inbpo441fg4t9idpuj6tuqcba94.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iot.axl"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
