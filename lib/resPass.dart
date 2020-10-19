@@ -69,7 +69,6 @@ class _resPassState extends State<resPass> {
                   hintStyle: TextStyle(color: Colors.grey),
                   border: new OutlineInputBorder(
                       borderSide: new BorderSide(color: Colors.black)),
-                  //border: InputBorder.none
                 ),
                 onChanged: (value) {
                   print("The value entered is: $value");

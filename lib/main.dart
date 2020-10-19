@@ -13,7 +13,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'global.dart' as globals;
 import 'M_list.dart';
 
-final databaseReference = Firestore.instance; //SUS LINE
+final databaseReference = Firestore.instance;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -152,7 +152,6 @@ class _HomePageState extends State<HomePage> {
                                               TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                       onChanged: (value) {
-                                        //print("The value entered is: $value");
                                         globals.tempEmail = "$value";
                                         obj.getData();
                                       },
@@ -172,7 +171,6 @@ class _HomePageState extends State<HomePage> {
                                               TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                       onChanged: (value) {
-                                        //print("The value entered is: $value");
                                         globals.tempPass = "$value";
                                         obj.getData();
                                       },
@@ -193,11 +191,8 @@ class _HomePageState extends State<HomePage> {
                                                 hintText: "Society",
                                                 hintStyle: TextStyle(
                                                     color: Colors.grey),
-                                                //     border: new OutlineInputBorder(
-                                                // borderSide: new BorderSide(color: Colors.teal))
                                                 border: InputBorder.none),
                                             onChanged: (value) {
-                                              //print("The value entered is: $value");
                                               globals.tempSoc = "$value";
                                               obj.getData();
                                             },
@@ -225,11 +220,8 @@ class _HomePageState extends State<HomePage> {
                                                 hintText: "Flat number",
                                                 hintStyle: TextStyle(
                                                     color: Colors.grey),
-                                                // border: new OutlineInputBorder(
-                                                // borderSide: new BorderSide(color: Colors.teal)),
                                                 border: InputBorder.none),
                                             onChanged: (value) {
-                                              //print("The value entered is: $value");
                                               globals.flatno = "$value";
                                               obj.getData();
                                             },
@@ -238,64 +230,9 @@ class _HomePageState extends State<HomePage> {
                                       )
                                     ],
                                   ),
-                                  // Container(
-                                  //   padding: EdgeInsets.all(10),
-                                  //   decoration: BoxDecoration(
-                                  //       border: Border(
-                                  //           bottom: BorderSide(
-                                  //               color: Colors.grey[200]))),
-                                  //   child: TextField(
-                                  //     obscureText: true,
-                                  //     decoration: InputDecoration(
-                                  //         hintText: "Society",
-                                  //         hintStyle:
-                                  //             TextStyle(color: Colors.grey),
-                                  //         border: InputBorder.none),
-                                  //     onChanged: (value) {
-                                  //       //print("The value entered is: $value");
-                                  //       globals.tempSoc = "$value";
-                                  //     },
-                                  //   ),
-                                  // ),
-
-                                  // Container(
-                                  //   padding: EdgeInsets.all(10),
-                                  //   decoration: BoxDecoration(
-                                  //       border: Border(
-                                  //           bottom: BorderSide(
-                                  //               color: Colors.grey[200]))),
-                                  //   child: TextField(
-                                  //     decoration: InputDecoration(
-                                  //         hintText: "Flat number",
-                                  //         hintStyle:
-                                  //             TextStyle(color: Colors.grey),
-                                  //         border: InputBorder.none),
-                                  //     onChanged: (value) {
-                                  //       //print("The value entered is: $value");
-                                  //       globals.flatno = "$value";
-                                  //     },
-                                  //   ),
-                                  // ),
                                 ],
                               ),
                             )),
-
-                        // FadeAnimation(1.9, Container(
-                        //     child: GestureDetector(
-                        //       onTap: () {
-                        //         Navigator.push(
-                        //             context, MaterialPageRoute(builder: (context) => SignUpPage()));
-                        //       },
-                        //       child: Text(
-                        //         'Sign up?',
-                        //         style: TextStyle(
-                        //           color: Colors.grey,
-                        //           fontSize: 15,
-                        //           fontWeight: FontWeight.w500,
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   )),
                         SizedBox(
                           height: 45,
                         ),
@@ -327,10 +264,6 @@ class _HomePageState extends State<HomePage> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 onPressed: () {
-                                  // print(globals.email);
-                                  // print(globals.password);
-                                  // print(globals.flatno);
-                                  // print(globals.tempPass);
 
                                   obj.getData();
 
@@ -419,12 +352,6 @@ class _HomePageState extends State<HomePage> {
                                             fontWeight: FontWeight.bold),
                                       ),
                                       onPressed: () {
-                                        // print("Enter a string : ");
-                                        // var userInput = "flat1242";
-
-                                        // print(finalin);
-
-                                        //----------
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(

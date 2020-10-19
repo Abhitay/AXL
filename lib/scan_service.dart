@@ -11,14 +11,8 @@ class scan_service {
         .document(globals.scan_temp_flat)
         .get()
         .then((DocumentSnapshot) {
-      //print(snapshot('email'));
-      //print(DocumentSnapshot.data['email'].toString());
-      // globals.email = DocumentSnapshot.data['email'].toString();
-      // globals.password = DocumentSnapshot.data['password'].toString();
-      // globals.key = DocumentSnapshot.data['key'].toString();
       globals.check_key = DocumentSnapshot.data['key'].toString();
       globals.status = DocumentSnapshot.data['status'].toString();
-      //print(snapshot);
     });
   }
 }

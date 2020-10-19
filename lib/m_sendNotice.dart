@@ -44,12 +44,10 @@ class _m_sendNoticeState extends State<m_sendNotice> {
                   hintStyle: TextStyle(color: Colors.grey),
                   border: new OutlineInputBorder(
                       borderSide: new BorderSide(color: Colors.black)),
-                  //border: InputBorder.none
                 ),
                 onChanged: (value) {
                   print("The value entered is: $value");
                   globals.mNotice = "$value";
-                  //obj.getData();
                 },
               ),
             ),

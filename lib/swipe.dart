@@ -7,14 +7,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final pages = [
   Container(
-    //     decoration: BoxDecoration(
-    //   gradient: LinearGradient(
-    //   begin: Alignment.bottomRight,
-    //   end: Alignment.topLeft,
-    //   colors: [
-    //   Color.fromRGBO(143, 148, 251, .1),
-    //   Color.fromRGBO(143, 148, 251, 100),
-    // ])),
     color: Colors.white,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -23,14 +15,6 @@ class MyApp extends StatelessWidget {
         Center(
           child: Image(image: AssetImage("assets/icon.png"), height: 300,),
           ),
-        // Center(
-        // child: Row(
-        //   children: <Widget>[
-        //     Text("Meet team AXL"),
-        //     //Center(child: Image(image: AssetImage("assets/icon.png"), height: 200,),)
-        //   ],
-        // )
-        // ),
         Column(
           children: <Widget>[
             Text("Meet AXL",
@@ -73,7 +57,6 @@ class MyApp extends StatelessWidget {
         ),
         Row(
           children: <Widget>[
-            // Text("Hi"),
             Center(child:  Padding(
               padding: EdgeInsets.all(16.0),
               child: RaisedButton(
@@ -96,7 +79,6 @@ class MyApp extends StatelessWidget {
                 },
             ),
             ),)
-           
           ],
         ),
       ],

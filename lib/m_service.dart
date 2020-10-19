@@ -10,11 +10,8 @@ class m_Service {
         .document("management")
         .get()
         .then((DocumentSnapshot) {
-      //print(snapshot('email'));
-      //print(DocumentSnapshot.data['email'].toString());
       globals.m_email = DocumentSnapshot.data['email'].toString();
       globals.m_password = DocumentSnapshot.data['password'].toString();
-      //print(snapshot);
     });
   }
 }

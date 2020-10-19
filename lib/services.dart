@@ -10,13 +10,10 @@ class Service {
         .document(globals.flatno)
         .get()
         .then((DocumentSnapshot) {
-      //print(snapshot('email'));
-      //print(DocumentSnapshot.data['email'].toString());
       globals.email = DocumentSnapshot.data['email'].toString();
       globals.password = DocumentSnapshot.data['password'].toString();
       globals.key = DocumentSnapshot.data['key'].toString();
       globals.name = DocumentSnapshot.data['name'].toString();
-      //print(snapshot);
     });
   }
 }

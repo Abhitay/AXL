@@ -36,13 +36,6 @@ class noticeDisplay extends StatelessWidget {
         body: StreamBuilder(
           stream: Firestore.instance.collection(soc).snapshots(),
           builder: (context, snapshot) {
-            // if (!snapshot.hasData) return new Text("No data");
-            // showDialog(
-            //   context: context,
-            //   builder: (BuildContext context) {
-            //     return alert;
-            //   },
-            // );
             if (snapshot.data.documents.isEmpty) {
               WidgetsBinding.instance.addPostFrameCallback(
                 (_) => showDialog(

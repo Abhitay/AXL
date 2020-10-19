@@ -27,8 +27,6 @@ class data extends StatelessWidget {
     );
     return Scaffold(
         appBar: AppBar(
-          //automaticallyImplyLeading: false,
-          //title: Text("  Hi, " + globals.name),
           flexibleSpace: Container(
               decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
@@ -43,13 +41,6 @@ class data extends StatelessWidget {
               .collection(globals.date)
               .snapshots(),
           builder: (context, snapshot) {
-            // if (!snapshot.hasData) return new Text("No data");
-            // showDialog(
-            //   context: context,
-            //   builder: (BuildContext context) {
-            //     return alert;
-            //   },
-            // );
             if (snapshot.data.documents.isEmpty) {
               WidgetsBinding.instance.addPostFrameCallback(
                 (_) => showDialog(

@@ -139,11 +139,6 @@ class _ScanPageState extends State<ScanPage> {
               image: AssetImage("assets/icon.png"),
               height: 200,
             ),
-            // Text(
-            //   "Result",
-            //   style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
-            //   textAlign: TextAlign.center,
-            // ),
             Text(
               qrCodeResult,
               style: TextStyle(
@@ -167,13 +162,6 @@ class _ScanPageState extends State<ScanPage> {
                 setState(() {
                   qrCodeResult = finalcodeSanner;
                 });
-
-                // try{
-                //   BarcodeScanner.scan()    this method is used to scan the QR code
-                // }catch (e){
-                //   BarcodeScanner.CameraAccessDenied;   we can print that user has denied for the permisions
-                //   BarcodeScanner.UserCanceled;   we can print on the page that user has cancelled
-                // }
               },
               child: Text(
                 "Scan",
@@ -210,34 +198,20 @@ class _ScanPageState extends State<ScanPage> {
                     var formattedDate =
                         "${dateParse.day}-${dateParse.month}-${dateParse.year}";
 
-                    // print(formattedDate);
                     var now = new DateTime.now();
-                    // //print(now.millisecondsSinceEpoch); // => 1555837118231
-                    // print(now.year);
-                    // print(now.month);
-                    // print(now.day);
-                    // print(now.weekday);
-                    // print(now.hour);
-                    // print(now.minute);
-                    // print(now.second);
-                    //print(temp_codeSanner);
-                    //tempKey = temp_codeSanner.substring(-3);
+
                     tempKey =
                         temp_codeSanner.substring(temp_codeSanner.length - 3);
                     globals.scan_temp_flat = finalcodeSanner;
-                    // print(globals.scan_temp_flat);
-                    //print("this:" + finalcodeSanner);
+
                     obj.getData();
                     obj.getData();
                     print("Key: " + globals.check_key);
                     print("Keytemo: " + tempKey);
                     String hr = now.hour.toString();
-                    //print("Hour:" + hr);
 
                     String min = now.minute.toString();
                     String t = hr + "" + min;
-
-                    //print(t);
 
                     var uploadStatus;
                     var changestatus;
@@ -263,9 +237,6 @@ class _ScanPageState extends State<ScanPage> {
                       if (globals.check_key == tempKey) {
                         globals.scan_error = "Successful";
                         scan_changedata();
-                        // print("Yes");
-                        // print(globals.check_key);
-                        // print(tempKey);
 
                         var fSoc = globals.m_tempsoc + "_details";
                         Random rnd;
@@ -274,9 +245,6 @@ class _ScanPageState extends State<ScanPage> {
                         rnd = new Random();
                         var r = min + rnd.nextInt(max - min);
                         print("$r");
-
-                        // var date =
-                        //     (now.hour + now.minute + now.second).toString();
 
                         var imagename = fSoc +
                             "-" +
@@ -319,9 +287,6 @@ class _ScanPageState extends State<ScanPage> {
                       } else {
                         globals.scan_error = "Alert! key not matching";
                         scan_changedata();
-                        // print("no");
-                        // print(globals.check_key);
-                        // print(tempKey);
                       }
                     }
                   } else if (confirm == 1) {
@@ -334,29 +299,6 @@ class _ScanPageState extends State<ScanPage> {
             SizedBox(
               height: 20,
             ),
-            // Container(
-            //   height: 50,
-            //   child: RaisedButton(
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(50),
-            //     ),
-            //     color: Colors.black,
-            //     splashColor: Colors.blue,
-            //     child: Text(
-            //       "Photo",
-            //       style: TextStyle(
-            //           color: Colors.white, fontWeight: FontWeight.bold),
-            //     ),
-            //     onPressed: () {
-            //       mybtnstate = "Uploaded";
-            //       final StorageReference firebaseStorageRef =
-            //           FirebaseStorage.instance.ref().child('myimage.jpg');
-
-            //       final StorageUploadTask task =
-            //           firebaseStorageRef.putFile(myimage);
-            //     },
-            //   ),
-            // ),
             Center(
               child: Text(
                 "$scan_error",

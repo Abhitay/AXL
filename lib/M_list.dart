@@ -16,54 +16,7 @@ class DropDown extends StatefulWidget {
   DropDownState createState() => DropDownState();
 }
 
-// class Company {
-//   int id;
-//   String name;
-
-//   Company(this.id, this.name);
-
-//   static List<Company> getCompanies() {
-//     return <Company>[
-//       Company(1, 'Society 1'),
-//       Company(2, 'Society 2'),
-//       Company(3, 'Society 3'),
-//       Company(4, 'Society 4'),
-//       Company(5, 'Society 5'),
-//     ];
-//   }
-// }
-
 class DropDownState extends State<DropDown> {
-  //
-  // List<Company> _companies = Company.getCompanies();
-  // List<DropdownMenuItem<Company>> _dropdownMenuItems;
-  // Company _selectedCompany;
-
-  // @override
-  // void initState() {
-  //   _dropdownMenuItems = buildDropdownMenuItems(_companies);
-  //   _selectedCompany = _dropdownMenuItems[0].value;
-  //   super.initState();
-  // }
-
-  // List<DropdownMenuItem<Company>> buildDropdownMenuItems(List companies) {
-  //   List<DropdownMenuItem<Company>> items = List();
-  //   for (Company company in companies) {
-  //     items.add(
-  //       DropdownMenuItem(
-  //         value: company,
-  //         child: Text(company.name),
-  //       ),
-  //     );
-  //   }
-  //   return items;
-  // }
-
-  // onChangeDropdownItem(Company selectedCompany) {
-  //   setState(() {
-  //     _selectedCompany = selectedCompany;
-  //   });
-  // }
 
   m_Service obj = m_Service();
 
@@ -159,7 +112,6 @@ class DropDownState extends State<DropDown> {
                                               TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                       onChanged: (value) {
-                                        //print("The value entered is: $value");
                                         globals.m_tempEmail = "$value";
                                         obj.getData();
                                       },
@@ -179,7 +131,6 @@ class DropDownState extends State<DropDown> {
                                               TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                       onChanged: (value) {
-                                        //print("The value entered is: $value");
                                         globals.m_tempPass = "$value";
                                         obj.getData();
                                       },
@@ -198,7 +149,6 @@ class DropDownState extends State<DropDown> {
                                               TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                       onChanged: (value) {
-                                        //print("The value entered is: $value");
                                         globals.m_tempsoc = "$value";
                                         obj.getData();
                                       },
@@ -221,12 +171,6 @@ class DropDownState extends State<DropDown> {
                         SizedBox(
                           height: 20,
                         ),
-                        // FadeAnimation(
-                        //   .5,
-                          
-                        // ),
-
-                        //Text('Selected: ${_selectedCompany.name}'),
 
                         SizedBox(
                           height: 20,
@@ -247,11 +191,7 @@ class DropDownState extends State<DropDown> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 onPressed: () {
-                                  //print();
                                   obj.getData();
-                                  //--------------------------
-                                  
-                                  //------------------------------
                                   if (globals.m_tempEmail == "none" ||
                                       globals.m_tempPass == "none") {
                                     print("Enter text field");

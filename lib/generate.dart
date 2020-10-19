@@ -38,7 +38,7 @@ class GeneratePageState extends State<GeneratePage> {
   }
 
   String qrData = globals.flatno +
-      globals.key; // already generated qr code when the page opens
+      globals.key;
 
   var formattedDate;
   void handleClick(String value) {
@@ -130,70 +130,9 @@ class GeneratePageState extends State<GeneratePage> {
             Container(
               margin: EdgeInsets.all(20.0),
               child: QrImage(
-                //plce where the QR Image will be shown
                 data: qrData,
               ),
             ),
-            // SizedBox(
-            //   height: 40.0,
-            // ),
-            // Container(
-            //   height: 50,
-            //   child: RaisedButton(
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(50),
-            //     ),
-            //     color: Colors.black,
-            //     child: Text(
-            //       'Log',
-            //       style: TextStyle(
-            //           color: Colors.white, fontWeight: FontWeight.bold),
-            //     ),
-            //     onPressed: () {
-            //       Navigator.push(
-            //         context,
-            //         MaterialPageRoute(builder: (context) => input()),
-            //       );
-            //     },
-            //   ),
-            // ),
-            /*Text(
-                    "New QR Link Generator",
-                    style: TextStyle(fontSize: 20.0),
-                  ),
-                  TextField(
-                    controller: qrdataFeed,
-                    decoration: InputDecoration(
-                      hintText: "Input your link or data",
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(40, 20, 40, 0),
-                    child: FlatButton(
-                      padding: EdgeInsets.all(15.0),
-                      onPressed: () async {
-      
-                        if (qrdataFeed.text.isEmpty) {        //a little validation for the textfield
-                          setState(() {
-                            qrData = "";
-                          });
-                        } else {
-                          setState(() {
-                            qrData = "flat1";
-                          });
-                        }
-      
-                      },
-                      /* child: Text(
-                        "Generate QR",
-                        style: TextStyle(
-                            color: Colors.blue, fontWeight: FontWeight.bold),
-                      ),
-                      shape: RoundedRectangleBorder(
-                          side: BorderSide(color: Colors.blue, width: 3.0),
-                          borderRadius: BorderRadius.circular(20.0)) ,*/
-                    ),
-                  )*/
           ],
         ),
       ),
