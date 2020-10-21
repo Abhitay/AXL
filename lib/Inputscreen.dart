@@ -59,7 +59,7 @@ class _inputState extends State<input> {
                     setState(() {
                       formattedDate = "${date.day}-${date.month}-${date.year}";
                       globals.date = formattedDate;
-                                          Navigator.push(
+                      Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => data()),
                     );

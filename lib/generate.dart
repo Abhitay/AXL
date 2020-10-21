@@ -7,6 +7,7 @@ import 'package:qrcode/Animation/FadeAnimation.dart';
 import 'package:qrcode/noticeDisplay.dart';
 import 'package:qrcode/services.dart';
 import 'package:qrcode/swipe.dart';
+import 'package:qrcode/userSetting.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Inputscreen.dart';
 import 'data.dart';
@@ -38,8 +39,7 @@ class GeneratePageState extends State<GeneratePage> {
     super.initState();
   }
 
-  String qrData = globals.flatno +
-      globals.key;
+  String qrData = globals.flatno + globals.key;
 
   var formattedDate;
   void handleClick(String value) {
@@ -96,37 +96,42 @@ class GeneratePageState extends State<GeneratePage> {
         children: [
           SpeedDialChild(
             child: Icon(Icons.calendar_today),
-            label: "Entry/Exit Log", labelStyle: TextStyle(color: Colors.white),
+            label: "Entry/Exit Log",
+            labelStyle: TextStyle(color: Colors.white),
             backgroundColor: Colors.black,
             labelBackgroundColor: Colors.black,
             onTap: () {
               getofflinedata();
               showDatePicker(
-                  context: context,
-                  initialDate: DateTime.now(),
-                  firstDate: DateTime(2020),
-                  lastDate: DateTime(3030))
-              .then((date) {
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2020),
+                      lastDate: DateTime(3030))
+                  .then((date) {
                 setState(() {
-                formattedDate = "${date.day}-${date.month}-${date.year}";
-                globals.date = formattedDate;
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => data()),
+                  formattedDate = "${date.day}-${date.month}-${date.year}";
+                  globals.date = formattedDate;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => data()),
                   );
                 });
               });
             },
           ),
-        SpeedDialChild(
-          child: Icon(Icons.settings),
-          label: "Settings", labelStyle: TextStyle(color: Colors.white),
-          labelBackgroundColor: Colors.black,
-          backgroundColor: Color.fromRGBO(143, 148, 251, 2),
-          onTap: () {
-            
-          },
-        )
+          SpeedDialChild(
+            child: Icon(Icons.settings),
+            label: "Settings",
+            labelStyle: TextStyle(color: Colors.white),
+            labelBackgroundColor: Colors.black,
+            backgroundColor: Color.fromRGBO(143, 148, 251, 2),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => usersetting()),
+              );
+            },
+          )
         ],
       ),
       // floatingActionButton: new FloatingActionButton(
@@ -189,8 +194,7 @@ class GeneratePageState extends State<GeneratePage> {
     preferences.remove("flat");
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (context) => MyApp()),
-      );
+      MaterialPageRoute(builder: (context) => MyApp()),
+    );
   }
 }

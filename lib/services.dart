@@ -14,6 +14,7 @@ class Service {
       globals.password = DocumentSnapshot.data['password'].toString();
       globals.key = DocumentSnapshot.data['key'].toString();
       globals.name = DocumentSnapshot.data['name'].toString();
+      globals.number = DocumentSnapshot.data['phone'].toString();
     });
   }
 }

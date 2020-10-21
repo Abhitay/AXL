@@ -18,6 +18,7 @@ String m_tempEmail = "none";
 String m_tempPass = "none";
 String m_tempsoc = "none";
 String name = "none";
+String number = "none";
 String m_soc = "none";
 
 String m_error = "";
