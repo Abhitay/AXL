@@ -91,11 +91,13 @@ class GeneratePageState extends State<GeneratePage> {
       resizeToAvoidBottomPadding: false,
       floatingActionButton: SpeedDial(
         animatedIcon: AnimatedIcons.menu_close,
+        backgroundColor: Colors.black,
         curve: Curves.bounceIn,
         children: [
           SpeedDialChild(
             child: Icon(Icons.calendar_today),
             label: "Entry/Exit Log", labelStyle: TextStyle(color: Colors.white),
+            backgroundColor: Colors.black,
             labelBackgroundColor: Colors.black,
             onTap: () {
               getofflinedata();

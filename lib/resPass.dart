@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:qrcode/generate.dart';
 import 'package:qrcode/scan.dart';
 import 'package:qrcode/scan_service.dart';
@@ -30,9 +32,76 @@ class _resPassState extends State<resPass> {
     print("hi");
     super.initState();
     getofflinedata();
+    _checkBio();
+    _getavailableBio();
+    _auth();
   }
 
   Service obj = Service();
+
+  bool _canCheckBio;
+  List<BiometricType> _availableBio;
+  String _authorized = "Not authorized";
+  LocalAuthentication auth = LocalAuthentication();
+
+  Future<void> _checkBio() async {
+    bool canCheckbio;
+    try {
+      canCheckbio = await auth.canCheckBiometrics;
+    } on PlatformException catch (e) {
+      print(e);
+    }
+
+    if (!mounted) return;
+
+    setState(() {
+      _canCheckBio = canCheckbio;
+    });
+  }
+
+  Future<void> _getavailableBio() async {
+    List<BiometricType> avalableBio;
+    try {
+      avalableBio = await auth.getAvailableBiometrics();
+    } on PlatformException catch (e) {
+      print(e);
+    }
+
+    if (!mounted) return;
+
+    setState(() {
+      _availableBio = avalableBio;
+    });
+  }
+
+  Future<void> _auth() async {
+    bool authenticated = false;
+    try {
+      authenticated = await auth.authenticateWithBiometrics(
+        localizedReason: "Scan your fingerprint to authenticate",
+        useErrorDialogs: true,
+        stickyAuth: false,
+      );
+    } on PlatformException catch (e) {
+      print(e);
+    }
+
+    if (!mounted) return;
+
+    setState(() {
+      _authorized = authenticated ? "Authorized" : "Not authorized";
+      if (_authorized == "Authorized") {
+        nextpage();
+      }
+    });
+  }
+
+  void nextpage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => GeneratePage()),
+    );
+  }
 
   var passwordError = "";
   void changedata() {
@@ -100,20 +169,34 @@ class _resPassState extends State<resPass> {
                   if (globals.passEnter == "") {
                     globals.passError = "Enter password";
                     changedata();
-                  }
-                  else if (globals.passEnter != globals.password){
+                  } else if (globals.passEnter != globals.password) {
                     globals.passError = "Wrong password";
                     changedata();
-                  }
-                  else if(globals.passEnter == globals.password){
+                  } else if (globals.passEnter == globals.password) {
+                    _authorized = "Authorized";
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => GeneratePage()),
+                      MaterialPageRoute(builder: (context) => GeneratePage()),
                     );
                   }
                 },
               ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            RawMaterialButton(
+              onPressed: () {
+                _auth();
+              },
+              elevation: 4.0,
+              fillColor: Colors.white,
+              child: Icon(
+                Icons.fingerprint,
+                size: 25.0,
+              ),
+              padding: EdgeInsets.all(15.0),
+              shape: CircleBorder(),
             ),
             SizedBox(
               height: 20,
