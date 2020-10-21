@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:qrcode/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'global.dart' as globals;
 
 class usersetting extends StatefulWidget {
@@ -12,7 +13,7 @@ class usersetting extends StatefulWidget {
 
 class _usersettingState extends State<usersetting> {
   @override
-  bool state = false;
+  bool state = globals.biouser;
   var oldPass = "none";
   var newPass = "none";
   Service obj = Service();
@@ -134,6 +135,7 @@ class _usersettingState extends State<usersetting> {
                             onChanged: (bool s) {
                               setState(() {
                                 state = s;
+                                allowbio();
                               });
                             })
                       ],
@@ -172,5 +174,13 @@ class _usersettingState extends State<usersetting> {
         ),
       ),
     );
+  }
+
+  Future allowbio() async {
+    print("running");
+    String bioauth = state.toString();
+    print(bioauth);
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.setString("biometric", bioauth);
   }
 }

@@ -382,5 +382,6 @@ class _HomePageState extends State<HomePage> {
     preferences.setString("email", globals.email);
     preferences.setString("soc", globals.tempSoc);
     preferences.setString("flat", globals.flatno);
+    preferences.setString("biometric", "false");
   }
 }

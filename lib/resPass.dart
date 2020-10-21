@@ -15,15 +15,31 @@ class resPass extends StatefulWidget {
 }
 
 class _resPassState extends State<resPass> {
+  bool bioallowed;
+
   Future getofflinedata() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     setState(() {
       globals.tempEmail = preferences.getString("email");
       globals.tempSoc = preferences.getString("soc");
       globals.flatno = preferences.getString("flat");
-
+      globals.biometric = preferences.getString("biometric");
       Service obj = Service();
       obj.getData();
+
+      if (globals.biometric == "false") {
+        bioallowed = false;
+        globals.biouser = false;
+      } else if (globals.biometric == "true") {
+        bioallowed = true;
+        globals.biouser = true;
+      }
+
+      if (globals.biometric == "true") {
+      _checkBio();
+      _getavailableBio();
+      _auth();
+    }
     });
   }
 
@@ -32,9 +48,6 @@ class _resPassState extends State<resPass> {
     print("hi");
     super.initState();
     getofflinedata();
-    _checkBio();
-    _getavailableBio();
-    _auth();
   }
 
   Service obj = Service();
@@ -142,7 +155,7 @@ class _resPassState extends State<resPass> {
                 onChanged: (value) {
                   print("The value entered is: $value");
                   globals.passEnter = "$value";
-                  getofflinedata();
+                  //getofflinedata();
                   obj.getData();
                 },
               ),
@@ -164,7 +177,7 @@ class _resPassState extends State<resPass> {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 onPressed: () {
-                  getofflinedata();
+                  //getofflinedata();
                   obj.getData();
                   if (globals.passEnter == "") {
                     globals.passError = "Enter password";
@@ -185,18 +198,21 @@ class _resPassState extends State<resPass> {
             SizedBox(
               height: 20,
             ),
-            RawMaterialButton(
-              onPressed: () {
-                _auth();
-              },
-              elevation: 4.0,
-              fillColor: Colors.white,
-              child: Icon(
-                Icons.fingerprint,
-                size: 25.0,
+            Visibility(
+              child: RawMaterialButton(
+                onPressed: () {
+                  _auth();
+                },
+                elevation: 4.0,
+                fillColor: Colors.white,
+                child: Icon(
+                  Icons.fingerprint,
+                  size: 25.0,
+                ),
+                padding: EdgeInsets.all(15.0),
+                shape: CircleBorder(),
               ),
-              padding: EdgeInsets.all(15.0),
-              shape: CircleBorder(),
+              visible: bioallowed,
             ),
             SizedBox(
               height: 20,

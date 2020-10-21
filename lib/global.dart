@@ -39,3 +39,5 @@ String noticeError = "none";
 
 String passEnter = "none";
 String passError = "none";
+String biometric = "none";
+bool biouser = false;
