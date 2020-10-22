@@ -2,7 +2,7 @@
   <img src="https://github.com/Maanaav/AXL/blob/master/assets/icon/icon.png" width="200" />
 </p>
 
-# <span style="color:red; font-family:Georgia; text-align:center; font-size:2em;">AXL
+# <div style="text-align:center"><span style="color:red; font-family:Georgia; font-size:2em;">AXL</span></div>
 In all modern societies, it is very hard to manually keep track of vehicle entries due to various factors. For example 
 1. Residents might have the same car model or colour, 
 2. The security guard may mistake the flat number, 
