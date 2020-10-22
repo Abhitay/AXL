@@ -1,4 +1,8 @@
-# <p align = "center">AXL</p>
+# <p align = "center">
+  AXL
+</p>
+
+# About
 In all modern societies, it is very hard to manually keep track of vehicle entries due to various factors. For example 
 1. Residents might have the same car model or colour, 
 2. The security guard may mistake the flat number, 
