@@ -1,6 +1,7 @@
-# <p align = "center">
-  AXL
+<p align = "center">
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/icon/icon.png" width="200" />
 </p>
+# <p align = "center"> AXL </p>
 
 # About
 In all modern societies, it is very hard to manually keep track of vehicle entries due to various factors. For example 
