@@ -11,7 +11,7 @@ In all modern societies, it is very hard to manually keep track of vehicle entri
   <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG3.PNG" width="800" />
 </p>
 
-# UI Demo
+# UI Demos
 <p align="center">
   <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/Screen1.gif" width="200" />
   <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/Screen2.gif" width="200" /> 
