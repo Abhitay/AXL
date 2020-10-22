@@ -4,4 +4,10 @@ In all modern societies, it is very hard to manually keep track of vehicle entry
 ![Image1](https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG1.PNG)
 ![Image2](https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG2.PNG)
 ![Image3](https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG3.PNG)
-![GIF](https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/GIF.gif)
+
+<p float="left">
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/Screen1.gif" width="200" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/Screen2.gif" width="200" /> 
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/Screen3.gif" width="200" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/Screen4.gif" width="200" />
+</p>
