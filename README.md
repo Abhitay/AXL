@@ -1,5 +1,8 @@
 # AXL
-In all modern societies, it is very hard to manually keep track of vehicle entry as residents may be having the same car modelor colour.The security guard can also mistakethe flat number and may not be able to keep up with the increased vehicle flow at rush hour when residents might come home from work.To tackle this problem,  this application automates the vehicle entry process by maintaining an external log, when the security guard scans a QR code from the resident’s smartphone.
+In all modern societies, it is very hard to manually keep track of vehicle entries due to various factors. For example 
+1. Residents might have the same car model or colour, 
+2. The security guard may mistake the flat number, 
+3. He may not be able to keep up with the vehicle flow at rush hour when residents might come home from work
 # Screenshots
 <p align="center">
   <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG1.PNG" width="800" />
