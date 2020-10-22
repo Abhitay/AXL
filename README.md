@@ -8,6 +8,9 @@ In all modern societies, it is very hard to manually keep track of vehicle entri
 2. The security guard may mistake the flat number, 
 3. He may not be able to keep up with the vehicle flow at rush hour when residents might come home from work
 
+Automated log (AXL) helps users seamlessly log vehicle entries into their respective societies and have a log available to them, while maintaining the user and management relation. The intended use for the application is for it be to implemented in gated communities
+
+
 # Screenshots
 <p align = "center">
   <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG1.PNG" width="800" />
