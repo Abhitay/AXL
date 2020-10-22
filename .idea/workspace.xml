@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3832d946-81ea-46c1-aa6a-09208ede8ff7" name="Default Changelist" comment="" />
+    <list default="true" id="3832d946-81ea-46c1-aa6a-09208ede8ff7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QR-CODE-Scanner-Generator-master 2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QR-CODE-Scanner-Generator-master 2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iAVhGbtKofDfP6iTJWGoND9Czl" />
   <component name="ProjectViewState">
@@ -17,6 +25,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -40,14 +49,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1342" height="266" key="GridCell.Tab.0.bottom" timestamp="1603347275640">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1342" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.610.1280.680@0.0.1920.1040" timestamp="1603347275640" />
+    <state width="1342" height="266" key="GridCell.Tab.0.center" timestamp="1603347275640">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1342" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/3840.610.1280.680@0.0.1920.1040" timestamp="1603347275640" />
+    <state width="1342" height="266" key="GridCell.Tab.0.left" timestamp="1603347275640">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1342" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/3840.610.1280.680@0.0.1920.1040" timestamp="1603347275640" />
+    <state width="1342" height="266" key="GridCell.Tab.0.right" timestamp="1603347275640">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1342" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/3840.610.1280.680@0.0.1920.1040" timestamp="1603347275640" />
     <state x="360" y="120" width="1200" height="800" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1602948394000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="360" y="120" width="1200" height="800" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040/3840.610.1280.680@0.0.1920.1040" timestamp="1602948394000" />
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1602948233091">
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1603347132616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/3840.610.1280.680@0.0.1920.1040" timestamp="1602948233091" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/3840.610.1280.680@0.0.1920.1040" timestamp="1603347132616" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog/3840.520.1536.800/0.0.1920.1040@0.0.1920.1040" timestamp="1601350516547" />
   </component>
 </project>
