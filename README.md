@@ -4,3 +4,4 @@ In all modern societies, it is very hard to manually keep track of vehicle entry
 ![Image1](https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG1.PNG)
 ![Image2](https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG2.PNG)
 ![Image3](https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG3.PNG)
+![GIF](https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/GIF.gif)
