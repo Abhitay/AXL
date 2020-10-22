@@ -1,5 +1,5 @@
 <p align = "center">
-  <img src="https://github.com/Maanaav/AXL/blob/master/assets/icon/icon.png" width="200" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/LogoText.png" width="200" />
 </p>
 
 # About
