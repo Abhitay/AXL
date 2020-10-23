@@ -13,9 +13,13 @@ Automated log (AXL) helps users seamlessly log vehicle entries into their respec
 
 # Screenshots
 <p align = "center">
-  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG1.PNG" width="800" />
-  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG2.PNG" width="800" />
-  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/IMG3.PNG" width="800" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/README/Screen1.PNG" width="800" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/README/Screen2.PNG" width="800" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/README/Screen3.PNG" width="800" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/README/Screen4.PNG" width="800" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/README/Screen5.PNG" width="800" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/README/Screen6.PNG" width="800" />
+  <img src="https://github.com/Maanaav/AXL/blob/master/assets/Screenshots/README/Screen7.PNG" width="800" />
 </p>
 
 # UI Demos
